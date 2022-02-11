@@ -1,0 +1,510 @@
+body{
+  margin: 0;
+  padding: 0;
+  background : radial-gradient(#1b2f49ee 10%,#14173a);
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+  overflow: hidden;
+}
+p,h1,h2,h3{
+  text-transform: uppercase;
+}
+.Header .HeaderTitle{
+  padding-left: 30px;
+}
+.Header .ScoreBlock p{
+  color: #5d6eb9;
+  position: relative;
+  top: 46px;
+}
+.ScoreBlock h1{
+  color: #57536a;
+  font-weight: 700;
+  font-size: 3.3em;
+  position: relative;
+  bottom: 16px;
+}
+.Header{
+  display: flex;
+  justify-content: space-between;
+  border: 3px solid #445671;
+  border-radius: 14px;
+  align-items: center;
+  width: 57%;
+  height: 122px;
+  transform: translateY(46px);
+  margin: auto;
+}
+.Header .ScoreBlock{
+  height: 104px;
+  width: 135px;
+  background-color: white;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  margin-right: 30px;
+}
+.PaperButton{
+  border-radius: 50%;
+  background: #4665f3;
+  width: 167px;
+  height: 167px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s;
+  transform: scale(0.9);
+}
+.PierreButton{
+  border-radius: 50%;
+  background: #dd3e5c;
+  width: 167px;
+  height: 167px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s;
+  transform: scale(0.9);
+}
+.CiseauxButton{
+  border-radius: 50%;
+  background: #eaa213;
+  width: 167px;
+  height: 167px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 44px;
+  transition: all 0.3s;
+  transform: scale(0.9);
+}
+.circleProp{
+  border-radius: 50%;
+  background: white;
+  width: 127px;
+  height: 127px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.TheButtons{
+  display: flex;
+  position: relative;
+  top: 170px;
+  width: 444px;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  margin: auto;
+  transform: scale(1.2);
+}
+footer .btn{
+  border: 2px solid #7f839e;
+  border-radius: 5px;
+  background-color: rgba(255, 255, 255, 0);
+  padding: 8px 25px;
+  color: white;
+  outline: none;
+  transition: all 0.3s;
+}
+footer{
+  position: absolute;
+  bottom: 18px;
+  display: flex;
+  width: 100%;
+  justify-content: flex-end;
+}
+footer .btn:hover{
+  background: white;
+  border: 2px solid white;
+  color: black;
+  cursor: pointer;
+}
+footer .RulesButton{
+  margin-right: 2.2%;
+  margin-bottom: 5px;
+}
+.onClickOnRulesButton{
+  position: absolute;
+  width: 100%;
+  height: 100vh;
+  top: 0;
+  background: rgba(0,0,0,0.5);
+  z-index: 1;
+}
+.onClickOnRulesButton .IndicationBloc{
+  width: 303.9px;
+  position: relative;
+  background: white;
+  border-radius: 10px;
+  padding: 21px 31px;
+  margin: auto;
+  margin-top: 133px;
+  z-index: 2;
+}
+.onClickOnRulesButton .IndicationBloc .HeadPart{
+  width: 303.9px;
+  background: white;
+  border-radius: 10px;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 30px;
+  position: relative;
+  bottom: 10px;
+}
+.onClickOnRulesButton .IndicationBloc .HeadPart .Close{
+  position: relative;
+  top: 3.5px;
+}
+.onClickOnRulesButton .IndicationBloc .HeadPart .Close:hover{
+  cursor: pointer;
+}
+.none{
+  opacity: 0;
+  z-index: -20;
+}
+.Animation1ForResumeBloc{
+  animation: OnClickInRulesButton 1s cubic-bezier(.56,.67,.43,1.37);
+}
+.Animation2ForResumeBloc{
+  animation: OnClickInCloseButton 1s cubic-bezier(.54,-0.61,.44,1.5);
+}
+@keyframes OnClickInRulesButton{
+  0%{
+    transform: translateY(-1000px);
+  }
+  100%{
+    transform: translateY(0);
+  }
+}
+@keyframes OnClickInCloseButton{
+  0%{
+    transform: translateY(0);
+  }
+  100%{
+    transform: translateY(-1000px);
+  }
+}
+
+.PaperButton:hover{
+  transform: scale(1) rotateZ(90deg);
+  cursor: pointer;
+}
+.CiseauxButton:hover{
+  transform: scale(1) rotateZ(-40deg);
+  cursor: pointer;
+}
+.PierreButton:hover{
+  transform: rotateZ(-90deg) scale(1);
+  cursor: pointer;
+}
+.LinePaperPierre{
+  position: absolute;
+  height: 10px;
+  width: 194px;
+  z-index: -1;
+  background: rgba(0,0,0,0.25);
+  top: 77px;  
+  transition: all 0.5s;
+}
+.LinePierreCiseaux{
+  position: absolute;
+  height: 10px;
+  width: 100px;
+  background: rgba(0,0,0,0.25);
+  top: 180px;
+  z-index: -2;
+  transform: rotate(-56deg);
+  left: 231px;
+  transition: all 0.5s;
+}
+.LineCiseauxPaper{
+  position: absolute;
+  height: 10px;
+  width: 100px;
+  background: rgba(0,0,0,0.25);
+  top: 180px;
+  z-index: -2;
+  transform: rotate(-127deg);
+  left: 116px;
+  transition: all 0.5s;
+}
+section .TheButtons .targetChoised{
+  transform: scale(1.2) translate(-41%, 20px);
+  transition: all 0.3s;
+}
+section .TheButtons .RocktargetChoised{
+  transform: scale(1.2) translate(-135%, 15px);
+}
+section .TheButtons .CiseauxtargetChoised{
+  transform: scale(1.2) translate(-20%, -158px);
+}
+.DisparitionRock{
+  opacity: 0;
+  transform: translate(500px,0);
+}
+.LinePaperPierreDisparitionAnimation{
+  transform: rotate(720deg) translateX(20px) scale(0);
+}
+.CiseauxButtonDisparitionAnimation{
+  transform: translate(-500px);
+  opacity: 0;
+}
+.LineScisorsPaperElementAnimation{
+  opacity: 0;
+  transform: translate(-100px,100px) rotate(-56deg);
+}
+.LineScisorsRockElementAnimation{
+  transform: translate(100px,100px) rotate(-127deg);
+  opacity: 0;
+}
+.commentaire{
+  opacity: 0;
+}
+.commentaireAnimation{
+  opacity: 1;
+}
+.PaperCommentaire,.CiseauxCommentaire,.RockCommentaire{
+  transition: opacity 0.5s;
+  color: white;
+  position: absolute;
+  top: -66px;
+  width: 150%;
+  text-align: center;
+}
+.ComputerChoice {
+  background: #161f3e;
+  border-radius: 50%;
+  width: 127px;
+  height: 127px;
+  position: relative;
+  bottom: 79.34px;
+  left: 99px;
+  transition: all 0.3s;
+}
+.ComputerChoice .computerButton{
+  margin: -16px;
+  transform: scale(1) translateY(-5px);
+}
+.disable:hover{
+  opacity: 1;
+  transform: rotate(0);
+}
+.NONE{
+  display: none;
+}
+.ComputerChoiceAnimation{
+  transform: scale(0);
+  animation: animationComputerChoice 0.7s forwards 1s;
+  position: relative;
+  bottom: 125px;
+}
+@keyframes animationComputerChoice{
+  0%{
+    transform: scale(0);
+  }
+  50%{
+    transform: scale(1.4);
+  }
+  100%{
+    transform: scale(1.21);
+  }
+}
+.ComputerChoice h2{
+  opacity: 0;
+  transition: opacity 0.5s 0.7s;
+  color: white;
+  position: absolute;
+  bottom: 164.6px;
+  left: 2.5px;
+  width: 101%;
+}
+.ComputerChoice .ComputerChoiceTextAnimation{
+  opacity: 1;
+}
+.SeeResult{
+  position: relative;
+  left: 211px;
+  bottom: 125px;
+}
+section .TheButtons .SeeResult2{
+  transform: scale(1.2) translate(-160px,20px) ;
+}
+section .TheButtons .SeeResult3{
+  transform: scale(1.2) translate(-160px,-158px) ;
+}
+section .TheButtons .SeeResult4{
+  transform: scale(1.2) translate(-208%,15px) ;
+}
+
+section .ResultGame .container{
+  position: absolute;
+  width: 277px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  right: 94px;
+  bottom: 200px;
+  transition: 1s;
+}
+section .ResultGame .container h2{
+  color: white;
+  font-size: 3.3em;
+  letter-spacing: 4px;
+}
+section .ResultGame .container button{
+  width: 96%;
+  height: 42px;
+  margin-top: -25px;
+  border-radius: 6px;
+  outline: none;
+  border: none;
+  background-color: white;
+  color: #d74a66;
+  transition: 0.5s;
+  font-size: 1.21em;
+}
+section .ResultGame .container button:hover{
+  background-color: #d74a66;
+  color: white;
+  cursor: pointer;
+}
+*{
+  font-family:'PT Sans Narrow';
+}
+
+/*THE MEDIA QUERIES*/
+
+@media screen and (max-width: 650px){
+  .Header .HeaderTitle,.Header .ScoreBlock{
+    transform: scale(0.85,0.94);
+  }
+  .Header .HeaderTitle{
+    position: relative;
+    right: 17px;
+  }
+  .Header .ScoreBlock{
+    position: relative;
+    margin: 0px;
+    right: 7px;
+  }
+  .Header{
+    width: 64%;
+  }
+}
+@media screen and (max-width: 594px){
+  .Header{
+    width: 79%;
+  }
+}
+@media screen and (max-width: 810px){
+  section .TheButtons .SeeResult4{
+    transform: scale(1) translate(-221%,17px);
+  }
+  section .TheButtons .SeeResult2{
+    transform: scale(1) translate(-147px,20px)
+  }
+  .ComputerChoice .computerButton{
+    transform: scale(0.82)translate(-50px,-20px);;
+  }
+  section .TheButtons .SeeResult3 {
+    transform: scale(1) translate(-147px,-197px);
+  }
+  .ComputerChoice{
+    height: 0;
+  }
+}
+@media screen and (max-width: 692px){
+  body{
+    background: linear-gradient(to bottom left, #1e3352 ,#181e40);
+  }
+
+  section .ResultGame .container
+  {
+    position: absolute;
+    width: 320px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    right: 79px;
+    bottom: -45px;
+    transition: 1s;
+  }
+  section .ResultGame .container h2{
+    transition: opacity 0.5s;
+    color: white;
+    position: absolute;
+    top: -163px;
+    width: 150%;
+    left: -77px;
+    text-align: center;
+    font-size: 3.8em;
+  }
+  section .ResultGame .container button{
+    height: 56px;
+    font-size: 2em;
+  }
+  footer .RulesButton{
+    width: 112px;
+    height: 42px;
+    border-radius: 9.2px;
+    font-size: 1.23em;
+    margin-bottom: 25px;
+  }
+  footer{
+    display: flex;
+    justify-content: center;
+  }
+  section .TheButtons .targetChoised{
+    transform: scale(1.1) translateX(-39px);
+  }
+  section .TheButtons .CiseauxtargetChoised{
+    transform: scale(1.1) translate(-39px,-191px);
+  }
+  section .TheButtons .RocktargetChoised{
+    transform: scale(1.1) translate(-247px,-0.05px);
+  }
+  
+  
+  section .TheButtons .SeeResult3{
+    transform: scale(1.1) translate(-39px,-191px);
+  }
+  section .TheButtons .SeeResult2{
+    transform: scale(1.1) translateX(-39px);
+  }
+  section .TheButtons .SeeResult4{
+    transform: scale(1.1) translate(-247px,-0.05px);
+  }
+  .ComputerChoice .computerButton {
+
+    transform: scale(0.905)translate(-148px,-34px);
+  }
+  .ComputerChoiceAnimation{
+    position: relative;
+    left: 211px;
+  }
+}
+@media screen and (max-width: 500px){
+  section .TheButtons .CiseauxtargetChoised{
+    transform: scale(1) translate(13px,-205px);
+  }
+  section .TheButtons .targetChoised{
+    transform: scale(1) translate(13px,7px);
+  }
+  section .TheButtons .RocktargetChoised{
+    transform:scale(1) translate(-211px,4.8px);
+  }
+  .ComputerChoice .computerButton {
+    transform: scale(0.83)translate(-214px,-32px);
+  }
+}
+@media screen and (max-width: 962px){
+  .TheButtons{
+    transform: scale(1);
+  }
+}
